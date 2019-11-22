@@ -1,2 +1,2 @@
 # post_project
-une application de type blog
+Une application de type blog
