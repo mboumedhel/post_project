@@ -1,0 +1,18 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIts > 0,
+				'list-group-item-danger': loveIts < 0 }">
+	<div style="clear: both" [ngStyle]="{color:loveIts < 0}">
+		<h3 style="float: left" [ngStyle]="{color:loveIts < 0}">{{ title}}</h3>
+		<h3 style="float: right" [ngStyle]="{color:loveIts < 0}">{{ getCreatedDate() | date:'M/d/yyyy' }}, {{ getCreatedDate() | date:'mediumTime' }}</h3>
+	</div>
+	<hr/>
+	<div style="clear: both" [ngStyle]="{color:loveIts < 0}">
+		<h4 [ngStyle]="{color:loveIts < 0}">{{ content}}</h4>
+	</div>
+		
+	<button class="btn btn-success"
+		(click)="onLoveIt()">love It!</button>
+	<button class="btn btn-danger"
+		(click)="onDisLikeIt()">Don't love it!</button>
+</li>
+
